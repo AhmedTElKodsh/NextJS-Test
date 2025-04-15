@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 35 41% 90%;
+    --foreground: 224 71% 18%;
+
+    --card: 35 41% 90%;
+    --card-foreground: 224 71% 18%;
+
+    --popover: 35 41% 90%;
+    --popover-foreground: 224 71% 18%;
+
+    --primary: 224 71% 18%;
+    --primary-foreground: 35 41% 90%;
+
+    --secondary: 6 42% 42%;
+    --secondary-foreground: 35 41% 90%;
+
+    --muted: 43 30% 80%;
+    --muted-foreground: 224 71% 25%;
+
+    --accent: 43 30% 80%;
+    --accent-foreground: 224 71% 18%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 43 33% 70%;
+    --input: 214 32% 91%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 18%;
+    --foreground: 35 41% 90%;
+
+    --card: 224 71% 18%;
+    --card-foreground: 35 41% 90%;
+
+    --popover: 224 71% 18%;
+    --popover-foreground: 35 41% 90%;
+
+    --primary: 35 41% 90%;
+    --primary-foreground: 224 71% 18%;
+
+    --secondary: 6 42% 42%;
+    --secondary-foreground: 35 41% 90%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 35 41% 70%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 35 41% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 35 41% 90%;
+
+    --border: 224 71% 25%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    direction: rtl;
+    font-family: 'IBM Plex Sans Arabic', 'Noto Naskh Arabic', sans-serif;
+  }
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+}
+
+/* Custom styles for the website */
+@layer components {
+  .hawaaeg-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .product-card {
+    @apply bg-background rounded-md overflow-hidden shadow-sm transition-all hover:shadow-md;
+  }
+
+  .primary-button {
+    @apply bg-primary text-primary-foreground rounded-md py-2 px-4 hover:bg-primary/90 transition-colors;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-foreground mb-6 text-center;
+  }
+}
