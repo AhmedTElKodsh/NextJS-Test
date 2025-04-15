@@ -9,8 +9,9 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  output: 'export',
-  distDir: 'out',
+  // Remove the static export configuration for Netlify which handles SSR
+  // output: 'export',
+  // distDir: 'out',
 };
 
 export default nextConfig;
